@@ -1,6 +1,9 @@
 # Vocabulary Builder and Practice Tool
 
 This Python script helps you expand your vocabulary by allowing you to look up word definitions, save them for later review, and practice guessing the words based on their definitions.
+![image](https://github.com/user-attachments/assets/aa885683-b873-4802-8634-c4c30e5c88cb)
+![image](https://github.com/user-attachments/assets/46a99a26-78da-401a-a901-60ad1370afed)
+
 
 ## Features
 
