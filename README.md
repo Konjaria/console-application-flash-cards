@@ -1,71 +1,148 @@
-# Vocabulary Builder and Practice Tool
+# 🧠 Vocabulary Builder & Practice Tool
 
-This Python script helps you expand your vocabulary by allowing you to look up word definitions, save them for later review, and practice guessing the words based on their definitions.
-![image](https://github.com/user-attachments/assets/aa885683-b873-4802-8634-c4c30e5c88cb)
-![image](https://github.com/user-attachments/assets/46a99a26-78da-401a-a901-60ad1370afed)
+Boost your vocabulary in a fun and simple way!  
+This tool helps you:
 
+- 📖 Look up new words  
+- ✍️ Save and review definitions  
+- 🎯 Practice guessing words  
+- 📊 Track your progress  
 
-## Features
+---
 
-* **Word Definition Lookup:** Uses the [Free Dictionary API](https://dictionaryapi.dev/) to fetch definitions, part of speech, and example sentences for a given word.
-* **Note-Taking:** You can choose to save the word, its part of speech, definition, and example to a `vocabulary.csv` file for future reference.
-* **Vocabulary Practice:** Presents you with definitions and parts of speech of words from your saved `vocabulary.csv` file and allows you to guess the word.
-* **Score Tracking:** Keeps track of the number of words you've guessed correctly and displays your current score as a percentage.
-* **Synonym Display:** If you guess a word incorrectly, the script attempts to fetch and display synonyms for that word.
+## ✨ What You Can Do
 
-## Prerequisites
+- ✅ Find word meanings and example sentences  
+- ✅ Save words to your personal vocabulary file  
+- ✅ Practice by guessing words based on definitions  
+- ✅ Get feedback and learn from your mistakes  
+- ✅ View synonyms if you answer incorrectly  
 
-* **Python 3.x** installed on your system.
-* **Required Python Libraries:**
-    * `requests`: For making HTTP requests to the dictionary API.
-    * `pydash`: For converting strings to camel case.
-    * `pandas`: For working with data in a tabular format (CSV file).
-    * `tabulate`: For creating nicely formatted tables in the console.
+---
 
-    You can install these libraries using pip:
-    ```bash
-    pip install requests pydash pandas tabulate
-    ```
+## 📥 How to Get Started (Step-by-Step)
 
-## Setup
+### 🔹 Step 1: Download the Tool
 
-1.  **Clone the repository** (if you have one) or **save the Python script** (`your_script_name.py`) to your local machine.
-2.  **Ensure `vocabulary.csv` exists:** The script will automatically create this file if it doesn't exist when you start saving words.
+1. Click the green **"Code"** button on the repository page (top right)  
+2. Select **"Download ZIP"**  
+3. Once downloaded, **unzip the folder**  
+   - Right-click → "Extract All" on Windows  
+   - Double-click on Mac  
 
-## How to Use
+You’ll now see a folder with several files inside — including `main.py`.
 
-1.  **Run the script:**
-    ```bash
-    python your_script_name.py
-    ```
-2.  **Upgrade Vocabulary:**
-    * The script will first ask: `Wanna upgrade vocab? :`. Type `yes` to look up and save new words, or `no` to skip this step.
-    * If you choose `yes`, you will be prompted to enter a `Word:`.
-    * The script will then display the definitions, part(s) of speech, and example sentences for the word.
-    * For each definition, you'll be asked: `-- wanna save for note-taking?`. Type `yes` to save the word details or `no` to skip.
-    * You'll then be asked: `Do you want to keep notes updated to the file? (Yes/No):`. Type `yes` to append the saved words to `vocabulary.csv`.
-    * Finally, you'll be asked: `Continue? (Yes/No):`. Type `yes` to look up more words or `no` to proceed to the practice session.
-3.  **Practice:**
-    * After the vocabulary upgrade phase (or if you chose `no` initially), the script will ask: `Amazing! Now, do you want to practice? (Yes/No)`. Type `yes` to start practicing.
-    * You will be presented with a definition and part of speech of a randomly selected word from your `vocabulary.csv` file.
-    * Enter your guess: `Your guess:`.
-    * The script will tell you if your guess is correct or incorrect. If incorrect, it will display the correct word and attempt to show synonyms.
-    * Your current score will be displayed.
-    * You'll be asked: `-- Wanna play again (if no - game ends):`. Type `yes` to continue practicing or `no` to end the session.
+---
 
-## Data Storage
+### 🔹 Step 2: Install Python (if not already installed)
 
-The vocabulary words you choose to save are stored in a simple CSV file named `vocabulary.csv`. Each row in this file represents a saved word and contains the "part of speech", "word", "definition", and "example".
+If you're unsure whether Python is installed:
 
-## Potential Improvements
+- Open a terminal (Command Prompt on Windows or Terminal on Mac)  
+- Type:
 
-* **More sophisticated scoring:** Implement different scoring methods or track streaks.
-* **Difficulty levels:** Allow users to filter words based on difficulty.
-* **Review mode:** Implement a mode to specifically review previously saved words and their details.
-* **Error handling:** Add more robust error handling for API requests and file operations.
-* **User interface:** Consider using a graphical user interface (GUI) for a more interactive experience.
-* **Word categories:** Allow users to categorize words.
+  ```bash
+  python --version
+  ```
+- If it shows a version like `Python 3.11.5`, you're good to go.  
+- If not, download and install Python from [https://www.python.org/downloads](https://www.python.org/downloads)
 
-## Contributing
+---
 
-Contributions to this project are welcome! Feel free to submit pull requests with bug fixes or new features.
+### 🔹 Step 3: Install Required Tools
+
+Only once — run this in your terminal:
+
+```bash
+pip install requests pydash pandas tabulate
+```
+This command installs the necessary Python packages that the tool needs to work properly.
+
+---
+
+### 🔹 Step 4: Run the Tool
+
+1. Open the folder you just unzipped.
+2. Double-click the file named **`main.py`** to run it.  
+   *(If that doesn’t work, open your terminal or command prompt, navigate to the folder, and type:)*
+
+   ```bash
+   python main.py
+   ```
+---
+
+## 🧩 How It Works
+
+### 📘 Add New Words
+
+When prompted:
+
+```
+Wanna upgrade vocab? :
+```
+
+- Type `yes` to look up and add new words.  
+- Type `no` to skip directly to practice mode.
+
+For each word you enter:
+
+- The tool will display its definitions, parts of speech, and example sentences.  
+- You can choose whether to save the word for later practice.  
+- Saved words are stored in your personal vocabulary file (`vocabulary.csv`).
+
+---
+
+### 🧠 Practice Mode
+
+After adding words or skipping, you'll see:
+
+```
+Amazing! Now, do you want to practice? :
+```
+
+- Type `yes` to start practicing.  
+- The program will show a word’s definition and part of speech.  
+- Try to guess the word based on the clues.  
+- You’ll receive immediate feedback:
+  - ✅ Correct guesses will be acknowledged.  
+  - ❌ Incorrect guesses will reveal the correct word and synonyms.  
+- Your score will update with each guess.
+
+---
+
+## 📁 Where Your Words Are Stored
+
+All saved words are stored in: vocabulary.csv
+
+Each entry contains:
+
+- The word  
+- Its meaning  
+- Part of speech  
+- Example sentence  
+
+You can open this file using Excel, Google Sheets, or any text editor.
+
+---
+
+## 💡 Coming Soon (Future Features)
+
+Planned improvements include:
+
+- Difficulty levels (easy, medium, hard)  
+- A review mode for focused learning  
+- A simple visual interface (no typing needed!)  
+- Score streaks and detailed performance tracking  
+
+---
+
+## 🤝 Want to Contribute?
+
+If you're familiar with Python, contributions and suggestions are welcome! Feel free to submit pull requests or open issues.
+
+---
+
+## ❓ Need Help?
+
+If you have any questions or run into issues, don’t hesitate to ask for help.  
+You don’t need to be a tech expert to use this tool!
